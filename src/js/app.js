@@ -5,6 +5,7 @@ import $ from "jquery";
 // import AOS from "aos";
 import "uikit/dist/css/uikit.css";
 import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.scss";
 import "slick-carousel";
 
 UIkit.use(Icons);
@@ -16,6 +17,8 @@ $(document).ready(function() {
     arrows: false,
     // prevArrow: ".slidenav--prev",
     // nextArrow: ".slidenav--next",
+    dots: true,
+    // dotsClass: "uk-dotnav",
     speed: 600,
     slidesToShow: 3,
     slidesToScroll: 1,
