@@ -1,0 +1,107 @@
+@font-face {
+  font-family: 'Vollkorn';
+  src: local('Vollkorn Bold Italic'), local('Vollkorn-BoldItalic'),
+    url('/fonts/hinted-subset-Vollkorn-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Vollkorn';
+  src: local('Vollkorn Semibold Italic'), local('Vollkorn-SemiboldItalic'),
+    url('/fonts/hinted-subset-Vollkorn-SemiboldItalic.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Vollkorn';
+  src: local('Vollkorn Bold'), local('Vollkorn-Bold'),
+    url('/fonts/hinted-subset-Vollkorn-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vollkorn';
+  src: local('Vollkorn Regular'), local('Vollkorn-Regular'),
+    url('/fonts/hinted-subset-Vollkorn-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vollkorn';
+  src: local('Vollkorn Black'), local('Vollkorn-Black'),
+    url('/fonts/hinted-subset-Vollkorn-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vollkorn';
+  src: local('Vollkorn Italic'), local('Vollkorn-Italic'),
+    url('/fonts/hinted-subset-Vollkorn-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Vollkorn';
+  src: local('Vollkorn Semibold'), local('Vollkorn-Semibold'),
+    url('/fonts/hinted-subset-Vollkorn-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vollkorn';
+  src: local('Vollkorn Black Italic'), local('Vollkorn-BlackItalic'),
+    url('/fonts/hinted-subset-Vollkorn-BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+}
+
+.uk-dropcap::first-letter {
+  color: $royal-red;
+}
+
+$accent-font: 'Vollkorn', serif;
+$font-secondary: "Helvetica", "Arial", sans-serif;
+$font-mono: "Consolas", monospace;
+$font-print-primary: "Georgia", "Times New Roman", "Times", serif;
+$font-print-secondary: "Georgia", "Times New Roman", "Times", serif;
+$global-font-family: $accent-font, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, sans-serif !default;
+
+html {
+  font-family: $global-font-family !important;
+}
+
+h1,
+.uk-h1,
+h2,
+.uk-h2,
+h3,
+.uk-h3,
+h4,
+.uk-h4,
+h5,
+.uk-h5,
+h6,
+.uk-h6 {
+  margin: 0 0 20px 0;
+  font-family: $global-font-family !important;
+  font-weight: normal;
+  color: #333;
+  text-transform: none;
+}
+
+blockquote {
+  font-family: -apple-system, $accent-font;
+  margin: 0 0 20px 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-style: italic;
+  color: #333;
+}

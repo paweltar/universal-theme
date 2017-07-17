@@ -1,0 +1,14 @@
+.section--hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
+    url(/images/bg2.jpeg);
+  h1,
+  h2,
+  p {
+    color: #fff;
+  }
+  text-align: center;
+}
+
+.header__text {
+  text-shadow: 0 0 10px #333;
+}
