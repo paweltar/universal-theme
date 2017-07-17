@@ -3,8 +3,9 @@
 // Read more here http://sass-lang.com/guide
 
 @import "settings";
-@import 'colors';
-@import 'typography';
+@import "colors";
+@import "typography";
 
 @import "components/navbar";
 @import "components/hero-section";
+@import "components/about-section";
