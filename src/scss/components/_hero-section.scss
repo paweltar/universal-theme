@@ -12,3 +12,26 @@
 .header__text {
   text-shadow: 0 0 10px #333;
 }
+
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: .5;
+  }
+}
+
+.flash {
+  animation-name: flash;
+  animation-duration: 5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  &:hover {
+    opacity: 1;
+  }
+}

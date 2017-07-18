@@ -16,7 +16,6 @@
     "uikit": "^3.0.0-beta.25"
   },
   "devDependencies": {
-    "aos": "^2.1.1",
     "autoprefixer": "^6.7.7",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
