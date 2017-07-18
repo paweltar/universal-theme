@@ -2,14 +2,14 @@
 
 <nav class="navbar--top uk-navbar-container uk-visible@s" style="z-index: 980;" uk-sticky="show-on-up: true; animation: uk-animation-slide-top; bottom: #bottom" uk-navbar>
   <div class="uk-navbar-left uk-margin-large-left">
-    <a class="uk-navbar-item uk-logo" href="/">Logo</a>
+    <a class="uk-navbar-item uk-logo" href="/" uk-scroll>Logo</a>
   </div>
 
   <div class="uk-navbar-right uk-margin-large-right">
     <ul class="uk-navbar-nav">
-      <li><a href="/about.html">About</a></li>
-      <li><a href="/gallery.html">Gallery</a></li>
-      <li><a href="/contact.html">Contact</a></li>
+      <li><a href="#section-about" uk-scroll>About</a></li>
+      <li><a href="#section-gallery" uk-scroll>Gallery</a></li>
+      <li><a href="#section-contact" uk-scroll>Contact</a></li>
     </ul>
   </div>
 </nav>
@@ -31,17 +31,17 @@
 
 {{!-- Mobile menu modal --}}
 
-<div id="modal-full" class="uk-modal-full" uk-modal>
+<div id="modal-full" class="uk-modal-full mobile-menu" uk-modal>
   <div class="uk-modal-dialog navigation__dialog">
     <button class="uk-modal-close-full" type="button" uk-close></button>
     <div class="uk-flex uk-flex-center uk-flex-middle nav__container">
       <ul class="uk-nav-primary uk-nav-center uk-nav-parent-icon" uk-nav>
         <li class="uk-nav-header">Menu</li>
         <li class="uk-nav-divider"></li>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about.html">About</a></li>
-        <li><a href="/gallery.html">Gallery</a></li>
-        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/" uk-scroll>Home</a></li>
+        <li><a href="#section-about" uk-scroll>About</a></li>
+        <li><a href="#section-gallery" uk-scroll>Gallery</a></li>
+        <li><a href="#section-contact" uk-scroll>Contact</a></li>
       </ul>
     </div>
   </div>
