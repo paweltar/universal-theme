@@ -2,11 +2,12 @@
 // All of your partials will be converted to single css file called main.css after build.
 // Read more here http://sass-lang.com/guide
 
+@import "typography";
 @import "settings";
 @import "colors";
-@import "typography";
 
 @import "components/navbar";
 @import "components/hero-section";
 @import "components/about-section";
 @import "components/gallery-section";
+@import "components/contact-section";
