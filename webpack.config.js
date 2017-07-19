@@ -12,12 +12,12 @@ module.exports = {
         loader: "babel-loader"
       },
       {
-        test: /\.scss$/i,
-        loaders: ["css-loader", "sass-loader"]
+        test: /\.scss$/,
+        loaders: ["style", "css?sourceMap", "sass?sourceMap"]
       },
       {
         test: /\.css$/,
-        loaders: ["style-loader", "css-loader"]
+        loaders: ["style?sourceMap", "css?sourceMap"]
       },
       {
         test: /\.(gif|png|jpe?g|svg|ttf|woff|woff2|eot)$/i,

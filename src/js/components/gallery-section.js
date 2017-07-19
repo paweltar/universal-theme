@@ -1,5 +1,6 @@
 import $ from "jquery";
-import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick.scss";
+import "slick-carousel/slick/slick-theme.scss";
 import "slick-carousel";
 
 $(document).ready(function() {

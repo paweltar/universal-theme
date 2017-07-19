@@ -4,6 +4,7 @@ import $ from "jquery";
 import "uikit/dist/css/uikit.css";
 import "./components/gallery-section";
 import "./components/contact-section";
+import "../scss/main.scss";
 
 UIkit.use(Icons);
 

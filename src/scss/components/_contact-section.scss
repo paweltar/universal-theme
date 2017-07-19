@@ -2,3 +2,8 @@
   display: flex;
   justify-content: center;
 }
+
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 850;
+}

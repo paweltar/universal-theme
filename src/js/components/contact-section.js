@@ -6,8 +6,8 @@ import shadowImg from "leaflet/dist/images/marker-shadow.png";
 
 $(document).ready(function() {
   this.customDefault = Leaflet.icon({
-    iconUrl: "js/" + iconImg,
-    shadowUrl: "js/" + shadowImg
+    iconUrl: iconImg,
+    shadowUrl: shadowImg
   });
 
   var mymap = Leaflet.map("map-container").setView([51.505, -0.09], 13);
