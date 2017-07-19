@@ -9,7 +9,8 @@ var sourcemaps = require("gulp-sourcemaps");
 var del = require("del");
 var runSequence = require("run-sequence");
 var browserSync = require("browser-sync").create();
-var webpack = require("gulp-webpack");
+var webpackStream = require("webpack-stream");
+var webpack2 = require("webpack");
 
 var devBuild = process.env.NODE_ENV !== "production";
 
@@ -62,8 +63,8 @@ gulp.task("panini:reset", function(done) {
 gulp.task("js", function() {
   return gulp
     .src("./src/js/app.js")
-    .pipe(webpack(require("./webpack.config.js")))
-    .pipe(gulp.dest(folder.build));
+    .pipe(webpackStream(require("./webpack.config.js"), webpack2))
+    .pipe(gulp.dest("build/"));
 });
 
 gulp.task("clean:dist", function() {

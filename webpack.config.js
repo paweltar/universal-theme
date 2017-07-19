@@ -1,8 +1,12 @@
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 module.exports = {
-  entry: "./src/js/app.js",
+  entry: {
+    app: "./src/js/app.js"
+  },
   output: {
-    path: __dirname,
-    filename: "main.js"
+    path: __dirname + "/build",
+    filename: "[name].js"
   },
   module: {
     loaders: [
@@ -12,39 +16,41 @@ module.exports = {
         loader: "babel-loader"
       },
       {
-        test: /\.scss$/,
-        loaders: ["style", "css?sourceMap", "sass?sourceMap"]
-      },
-      {
-        test: /\.css$/,
-        loaders: ["style?sourceMap", "css?sourceMap"]
+        test: /\.(scss|css)$/,
+        loaders: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: ["css-loader?sourceMap", "sass-loader?sourceMap"]
+        })
       },
       {
         test: /\.(gif|png|jpe?g|svg|ttf|woff|woff2|eot)$/i,
         loaders: [
           "file-loader?hash=sha512&digest=hex&name=[hash].[ext]",
-          "image-webpack-loader"
+          {
+            loader: "image-webpack-loader",
+            query: {
+              mozjpeg: {
+                quality: 65
+              },
+              pngquant: {
+                quality: "65-90",
+                speed: 4
+              },
+              svgo: {
+                plugins: [
+                  {
+                    removeViewBox: false
+                  },
+                  {
+                    removeEmptyAttrs: false
+                  }
+                ]
+              }
+            }
+          }
         ]
       }
     ]
   },
-  imageWebpackLoader: {
-    mozjpeg: {
-      quality: 65
-    },
-    pngquant: {
-      quality: "65-90",
-      speed: 4
-    },
-    svgo: {
-      plugins: [
-        {
-          removeViewBox: false
-        },
-        {
-          removeEmptyAttrs: false
-        }
-      ]
-    }
-  }
+  plugins: [new ExtractTextPlugin("app.css")]
 };
